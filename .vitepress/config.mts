@@ -19,7 +19,10 @@ export default defineConfig({
     nav: [
       { text: "Home", link: "/" },
       { text: "Docs", link: "/markdown-examples" },
-      { text: "Login", link: "/login" },
+      {
+        text: "Login",
+        link: "https://radicalvpn.com/portal/auth/login",
+      },
     ],
 
     socialLinks: [

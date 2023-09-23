@@ -13,7 +13,7 @@ hero:
   actions:
     - theme: brand
       text: Login
-      link: /markdown-examples
+      link: https://radicalvpn.com/portal/auth/login
     - theme: alt
       text: Show documentation
       link: /api-examples
