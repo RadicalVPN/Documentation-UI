@@ -5,17 +5,16 @@ export default defineConfig({
   title: "RadicalVPN",
   description: "A modern, high-performance VPN",
   appearance: "dark",
+  head: [["link", { rel: "icon", href: "/favicon.ico" }]],
   themeConfig: {
     logo: {
       dark: "/logo_dark.svg",
       light: "logo.svg",
     },
     outline: [2, 3],
-
     search: {
       provider: "local",
     },
-
     nav: [
       { text: "Home", link: "/" },
       { text: "Docs", link: "/markdown-examples" },
