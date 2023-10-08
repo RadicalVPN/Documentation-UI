@@ -1,6 +1,16 @@
----
-layout: page
----
+<template>
+  <VPTeamPageTitle>
+    <template #title>
+      Our Team
+    </template>
+    <template #lead>
+        RadicalVPN is developed by a small, German developer team
+    </template>
+  </VPTeamPageTitle>
+  <VPTeamMembers
+    :members="members"
+  />
+</template>
 
 <script setup>
 import {
@@ -28,17 +38,3 @@ const members = [
   }
 ]
 </script>
-
-<VPTeamPage>
-  <VPTeamPageTitle>
-    <template #title>
-      Our Team
-    </template>
-    <template #lead>
-        RadicalVPN is developed by a small, German developer team
-    </template>
-  </VPTeamPageTitle>
-  <VPTeamMembers
-    :members="members"
-  />
-</VPTeamPage>

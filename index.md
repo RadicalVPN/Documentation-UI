@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "Radical"
-  text: "A modern, high-performance VPN"
+  name: 'Radical'
+  text: 'A modern, high-performance VPN'
   tagline: Simple, modern and fast. The VPN provider you have always been looking for.
   image:
     light: /logo.svg
@@ -15,7 +15,7 @@ hero:
       text: Login
       link: https://radicalvpn.com/portal/auth/login
     - theme: alt
-      text: Show documentation
+      text: Getting started
       link: /api-examples
 
 features:
@@ -26,6 +26,14 @@ features:
   - title: Wireguard
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
+
+<script setup>
+import VpnStatus from '.vitepress/theme/components/VPNStatus.vue'
+import Team from '.vitepress/theme/components/Team.vue'
+</script>
+
+<vpn-status />
+<team />
 
 <style>
 :root {
@@ -47,4 +55,5 @@ features:
     --vp-home-hero-image-filter: blur(72px);
   }
 }
+
 </style>

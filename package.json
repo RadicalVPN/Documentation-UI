@@ -2,10 +2,12 @@
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
-    "preview": "vitepress preview",
-    "deploy": "npm run build && rsync -avz --delete .vitepress/dist/* root@116.203.225.81:/opt/RadicalVPN/Landing"
+    "preview": "vitepress preview"
   },
   "dependencies": {
     "vitepress": "^1.0.0-rc.15"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3"
   }
 }
