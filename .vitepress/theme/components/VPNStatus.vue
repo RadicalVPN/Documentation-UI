@@ -5,7 +5,7 @@
   <div class="info-box">
     <div class="info-item">
       <p class="info-label">Status:</p>
-      <p class="info-value">❌ Not protected</p>
+      <p class="info-value">{{ isRadicalVpnExitNode ? '✅ Protected' : '❌ Not protected' }}</p>
     </div>
     <div class="info-item">
       <p class="info-label">IP Address:</p>
@@ -34,6 +34,7 @@
   const country = ref('unknown')
   const city = ref('unknown')
   const isp = ref('unknown')
+  const isRadicalVpnExitNode = ref(false)
 
   try {
     const apiData = await (await fetch('/geoip/current')).json()
@@ -52,6 +53,10 @@
 
     if (apiData.isp) {
       isp.value = apiData.isp
+    }
+
+    if (apiData.isRadicalVpnExitNode) {
+      isRadicalVpnExitNode.value = apiData.isRadicalVpnExitNode
     }
   } catch (e) {
     console.error(e)
