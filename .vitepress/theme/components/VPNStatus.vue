@@ -5,7 +5,7 @@
   <div class="info-box">
     <div class="info-item">
       <p class="info-label">Status:</p>
-      <p class="info-value">❌ Insecure</p>
+      <p class="info-value">❌ Not protected</p>
     </div>
     <div class="info-item">
       <p class="info-label">IP Address:</p>
@@ -32,9 +32,20 @@
 
   try {
     const apiData = await (await fetch('geoip/current')).json()
-    ip.value = apiData.ip || 'unknown'
-    city.value = apiData.city_name || 'unknown'
-    isp.value = apiData.isp || 'unknown'
+
+    console.log(apiData)
+
+    if (apiData.ip) {
+      ip.value = apiData.ip
+    }
+
+    if (apiData.city_name) {
+      city.value = apiData.city_name
+    }
+
+    if (apiData.isp) {
+      isp.value = apiData.isp
+    }
   } catch (e) {
     console.error(e)
   }
