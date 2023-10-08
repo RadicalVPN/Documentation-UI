@@ -55,4 +55,15 @@ export default defineConfig({
       message: 'Made with ❤️',
     },
   },
+
+  vite: {
+    server: {
+      proxy: {
+        '/geoip': {
+          target: 'https://radicalvpn.com',
+          changeOrigin: true,
+        },
+      },
+    },
+  },
 })

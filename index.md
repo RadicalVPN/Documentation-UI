@@ -32,7 +32,10 @@ import VpnStatus from '.vitepress/theme/components/VPNStatus.vue'
 import Team from '.vitepress/theme/components/Team.vue'
 </script>
 
-<vpn-status />
+<Suspense>
+  <vpn-status />
+</Suspense>
+
 <team />
 
 <style>
